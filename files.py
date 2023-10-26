@@ -37,3 +37,4 @@ print(path.splitext("file.txt"))
 print(path.abspath(path.join("..", "testdir")))
 
 print(os.environ.get("TEST", "value"))
+
