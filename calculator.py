@@ -4,6 +4,7 @@ def read():
     operation = input()
     return x, y, operation
 
+
 def eval(x, y, operation):
     switcher = {
         "+": x + y,
@@ -14,6 +15,7 @@ def eval(x, y, operation):
     result = switcher.get(operation, "Ошибка")
     return result
 
+
 def print_loop(expression, history):
     print()
     print(expression)
@@ -22,6 +24,7 @@ def print_loop(expression, history):
     print("* ", history[2])
     print("/ ", history[3])
     print()
+
 
 def REPL(history):
     x, y, operaion = read()
@@ -36,10 +39,13 @@ def REPL(history):
     if (operaion == "/"):
         history[3].append(expression)
     print_loop(expression, history)
-    REPL(history)
+
+
 def main():
     history = [[],[],[],[]]
-    REPL(history)
+    while True:
+        REPL(history)
+
 
 if __name__ == "__main__":
     main()
