@@ -28,6 +28,7 @@ class Animal():
     def say(self):
         print(f"{self.__name} говорит!")
 
+
     @staticmethod
     def get_count():
         return Animal._count
